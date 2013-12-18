@@ -6,5 +6,6 @@ HMVC,前端页面仿node.js 的require写法.
 require('sms').open();
 require('msg').open();
 require('sms/send').send();
+require('sms/send').send();
 require('sms').temparr;
 ```
