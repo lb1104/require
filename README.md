@@ -1,6 +1,6 @@
 require
 =======
-127.0.0.1/目录下面 
+127.0.0.1/目录下面  
 HMVC,前端页面仿node.js 的require写法. 
 ```js
 require('sms').open();
