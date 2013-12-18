@@ -16,16 +16,16 @@ var __modulename = '';
  * require('smscenter').add();
  * @example
  * require('smscenter/send')('d')
- * @param modulesname
+ * @param path
  * @returns {*}
  */
-var require = function (modulesname) {
+var require = function (path) {
 
     var cache = false;//缓存,只读取一次文件
 
-    if (!require.cache[modulesname] || !cache) {
+    if (!require.cache[path] || !cache) {
 
-        var temparr = modulesname.split('/');
+        var temparr = path.split('/');
         var modulename = temparr.shift();
         var mothedname = temparr.join('/');
         temparr = null;
@@ -44,16 +44,16 @@ var require = function (modulesname) {
 
                 var func = "var exports = {};\n" + data + "\nreturn exports;";
 
-                require.cache[modulesname] = new Function('__modulename', func)(modulename);
+                require.cache[path] = new Function('__modulename', func)(modulename);
 
             },
             error: function (jqXHR, textStatus) {
-                alert('js加载Modules(' + modulesname + ')失败,Status:' + textStatus + ';');
+                alert('js加载Modules(' + path + ')失败,Status:' + textStatus + ';');
             }
         });
     }
 
-    return require.cache[modulesname];
+    return require.cache[path];
 
 };
 
