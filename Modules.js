@@ -34,7 +34,7 @@ function require(path) {
         }
 
         $.ajax({
-            url: ROOT + 'modules/' + modulename + '/static/' + mothedname + '.js',
+            url: (ROOT||'') + 'modules/' + modulename + '/static/' + mothedname + '.js',
             type: 'GET',
             timeout: 5000,
             dataType: 'text',
