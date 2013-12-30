@@ -2,8 +2,8 @@ exports.send=function(){
 	alert(__modulename+'/send/send');
 };
 
-exports.open(){
+exports.open=function(){
 
 	alert(__modulename+'/send/open');
 
-}
+};

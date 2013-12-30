@@ -44,7 +44,7 @@ function require(path) {
 
                 var func = "var exports = {};\n" + data + "\nreturn exports;";
 
-                require.cache[path] = new Function('__modulename', func)(modulename);
+                require.cache[path] = Function('__modulename', func)(modulename);
 
             },
             error: function (jqXHR, textStatus) {
