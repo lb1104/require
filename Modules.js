@@ -17,9 +17,9 @@ var __modulename = '';
  * @example
  * require('smscenter/send')('d')
  * @param path
- * @returns {*}
+ * @returns {exports}
  */
-var require = function (path) {
+function require(path) {
 
     var cache = false;//缓存,只读取一次文件
 
